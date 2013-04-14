@@ -2,7 +2,7 @@ class ImagesController < ApplicationController
   # GET /images
   # GET /images.json
   def index
-    @images = Image.all
+    @images = Image.order("created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb
