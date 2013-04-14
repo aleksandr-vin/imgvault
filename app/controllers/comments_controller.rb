@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+
+  http_basic_authenticate_with :name => "jay", :password => "123", :only => :destroy
+
   def create
     @image = Image.find(params[:image_id])
     @comment = @image.comments.create(params[:comment])

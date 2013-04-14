@@ -1,4 +1,7 @@
 class ImagesController < ApplicationController
+
+  http_basic_authenticate_with :name => "jay", :password => "123", :except => [:index, :show]
+
   # GET /images
   # GET /images.json
   def index
