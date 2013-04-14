@@ -1,0 +1,8 @@
+<p>
+  <b><%= comment.commenter %>:</b><br />
+  <%= comment.body %>
+  <br />
+  <%= link_to 'Delete Comment', [comment.image, comment],
+              :confirm => 'Are you sure?',
+              :method => :delete %>
+</p>

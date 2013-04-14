@@ -1,5 +1,7 @@
 Imgvault::Application.routes.draw do
-  resources :images
+  resources :images do
+    resources :comments
+  end
 
 
   # The priority is based upon order of creation:
