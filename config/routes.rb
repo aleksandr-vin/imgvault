@@ -1,6 +1,7 @@
 Imgvault::Application.routes.draw do
   resources :images
 
+  match 'updated' => 'images#updated'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -4,6 +4,7 @@
   <tr>
     <th>Title</th>
     <th>Author</th>
+    <th>Updated</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +14,7 @@
   <tr>
     <td><%= image.title %></td>
     <td><%= image.author %></td>
+    <td><%= image.updated_at %></td>
     <td><%= link_to 'Show', image %></td>
     <td><%= link_to 'Edit', edit_image_path(image) %></td>
     <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
