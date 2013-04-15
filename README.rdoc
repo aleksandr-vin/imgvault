@@ -10,8 +10,9 @@ There is a simliest access control imlemented for 'writable' actions
 with images postings and for deleting comments, this admin credentials
 are:
 
-	login: jay
-	password: 123
+	* login: jay
+	
+	* password: 123
 
 Also note that there are now design applied for the site (I mean no
 CSS other than that scaffolded by Rails), I assume that design was out
@@ -25,22 +26,29 @@ To get the site up and running you can:
 
 1. Clone the repository from github:
 
-   git clone https://github.com/aleksandr-vin/imgvault.git
+   	 git clone https://github.com/aleksandr-vin/imgvault.git
 
 2. Change directory to imgvault:
 
-   cd imgvault
+   	  cd imgvault
 
 2. Setup development db:
 
-   rake db:setup
+   	 rake db:setup
 
 3. Start Rails server:
 
-   rails server
+   	 rails server
 
 
 That's it! Now navigate your brouwser to http://localhost:3000 and post images...
+
+
+== Tests
+
+There are unit, functional and integration tests that can be run like this:
+
+      	 rake test
 
 
 With best wishes,
