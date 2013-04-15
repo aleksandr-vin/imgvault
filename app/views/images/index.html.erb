@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Picture</th>
     <th>Title</th>
     <th>Author</th>
     <th>Created</th>
@@ -13,6 +14,7 @@
 
 <% @images.each do |image| %>
   <tr>
+    <th><%= image_tag image.pic.url(:thumb) %></th>
     <td><%= image.title %></td>
     <td><%= image.author %></td>
     <td><%= image.created_at %></td>

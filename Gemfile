@@ -36,3 +36,6 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+# Add paperclip for images upload
+gem 'paperclip', '~> 3.0'

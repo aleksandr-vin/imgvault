@@ -16,3 +16,6 @@
 
 # Ignore emacs backup file copies
 *~
+
+# Ignore system directory with uploaded images
+/public/system
