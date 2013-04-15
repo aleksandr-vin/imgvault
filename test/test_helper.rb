@@ -15,4 +15,8 @@ class ActiveSupport::TestCase
     @request.env['HTTP_AUTHORIZATION'] =
       ActionController::HttpAuthentication::Basic.encode_credentials(login, passwd)
   end
+
+  def sample_file(filename = "sample_pic.jpg")
+    File.new("test/fixtures/#{filename}")
+  end
 end

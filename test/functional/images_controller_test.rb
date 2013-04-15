@@ -22,8 +22,10 @@ class ImagesControllerTest < ActionController::TestCase
   end
 
   test "should create image" do
+    pic = fixture_file_upload 'sample_pic.jpg'
     assert_no_difference('Image.count') do
-      post :create, image: { author: @image.author, title: @image.title }
+      post :create, image: { author: @image.author, title: @image.title,
+                             pic: pic }
     end
 
     assert_response 401, "Lacks for auth"
@@ -31,7 +33,8 @@ class ImagesControllerTest < ActionController::TestCase
     fake_auth("jay", "123")
 
     assert_difference('Image.count') do
-      post :create, image: { author: @image.author, title: @image.title }
+      post :create, image: { author: @image.author, title: @image.title,
+                             pic: pic }
     end
 
     assert_redirected_to image_path(assigns(:image))
@@ -53,12 +56,17 @@ class ImagesControllerTest < ActionController::TestCase
   end
 
   test "should update image" do
-    put :update, id: @image, image: { author: @image.author, title: @image.title }
+    pic = fixture_file_upload 'sample_pic.jpg'
+    put :update, id: @image, image: { author: @image.author,
+                                      title: @image.title,
+                                      pic: pic }
     assert_response 401, "Lacks for auth"
 
     fake_auth("jay", "123")
 
-    put :update, id: @image, image: { author: @image.author, title: @image.title }
+    put :update, id: @image, image: { author: @image.author,
+                                      title: @image.title,
+                                      pic: pic }
     assert_redirected_to image_path(assigns(:image))
   end
 
