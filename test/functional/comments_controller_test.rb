@@ -1,7 +1,5 @@
 require 'test_helper'
 
 class CommentsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  # See integration test comments_flow_test.rb
 end
