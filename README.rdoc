@@ -8,8 +8,8 @@ will need an ImageMagic for this app to run.
 
 There is a simliest access control imlemented for 'writable' actions
 with images postings and for deleting comments, this admin credentials
-are:
-	login: jay	
+are
+	login: jay ,	
 	password: 123
 
 Also note that there are now design applied for the site (I mean no
@@ -22,16 +22,16 @@ here with only a few tweaks.
 
 To get the site up and running you can:
 
-1. Clone the repository from github:
+Clone the repository from github:
    	 git clone https://github.com/aleksandr-vin/imgvault.git
 
-2. Change directory to imgvault:
-   	  cd imgvault
+Change directory to imgvault:
+   	 cd imgvault
 
-2. Setup development db:
+Setup development db:
    	 rake db:setup
 
-3. Start Rails server:
+Start Rails server:
    	 rails server
 
 
