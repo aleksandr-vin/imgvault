@@ -10,7 +10,9 @@ class Image < ActiveRecord::Base
 
   has_attached_file :pic, :styles => { :large => "400x400>",
                                        :thumb => "100x100>" },
-                    :default_url => "/images/:style/missing.png"
+                    :default_url => "/system/images/:style/missing.png",
+                    :url => "/system/images/:style/:hash.:extension",
+                    :hash_secret => "longSecretString"
 
   validates :pic, :attachment_presence => true
   validates_with AttachmentPresenceValidator, :attributes => :pic
